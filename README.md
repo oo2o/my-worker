@@ -16,6 +16,9 @@ lerna bootstrap
 ```
 make dev
 Then you can access `http://127.0.0.1:8083` to see if the demo is started correctly.
+
+Username: admin 
+Password: 123456
   
 ```
 
