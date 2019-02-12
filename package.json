@@ -1,0 +1,14 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "worker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OO2O",
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^3.10.5"
+  }
+}

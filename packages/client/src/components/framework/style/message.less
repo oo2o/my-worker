@@ -1,0 +1,32 @@
+.my-message{
+    position: fixed;
+    top: 40px;
+    text-align: center;
+    width: 100%;
+    transition: height .3s ease-in-out, padding .2s ease-in-out;
+    & > label {
+        background-color: #FFF;
+        padding: 8px 16px;
+        box-shadow:0 1px 6px rgba(0, 0, 0, .2);
+    }
+
+    &-icon{
+        color: #fff;
+        border-radius: 50%;
+        &-success {
+            background-color: @success-color;
+        }
+        &-warning {
+            background-color: @warning-color;
+        }
+
+        &-error {
+           background-color: @error-color ; 
+        }
+
+        &-info {
+            background-color: @primary-color;
+        }
+    }
+    
+}

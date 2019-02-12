@@ -1,0 +1,122 @@
+
+@layout-header-background: #FFF;
+@layout-header-padding: 8px;
+@layout-header-height: 40px;
+
+@layout-footer-background: #FFF;
+@layout-footer-padding: 8px;
+@layout-footer-height: 30px;
+
+@layout-backgroud-color: #f3f3f3;
+
+.my-layout{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    background: @layout-backgroud-color;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &-header,
+    &-footer {
+        flex: 0 0 auto; 
+    }
+
+    &-header {
+        background: @layout-header-background;
+        padding: @layout-header-padding;
+        height: @layout-header-height;
+        line-height: @layout-header-height;
+        box-shadow: 0 2px 2px #e6e6e6;
+
+        &-icon {
+            padding-top: 4px;
+            padding-left: 4px;
+            cursor: pointer;
+            position: absolute;
+            display: none;
+            z-index: 20;
+            @media (max-width: @screen-md-max) {
+                display: inherit;
+            }
+        }
+    }
+
+    &-footer {
+        background: @layout-footer-background;
+        color: @text-color;
+        font-size: @font-size-base;
+        height: @layout-footer-height;
+        line-height:@layout-footer-height;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        @media (max-width: @screen-md-max) {
+            display: none;
+        }
+    }
+
+    &-has-sider{
+        display: flex;
+    }
+
+    &-content {
+        flex: auto;
+        width: 100%;
+        height: 100%;
+        @media (min-width: @screen-lg) {
+            width: 1200px;
+            margin: auto;
+        }
+    }
+
+    &-content-right{
+        background-color: @layout-backgroud-color; 
+        width: 70%; 
+        flex: auto;
+        height: calc(~"100% - 30px");
+        padding: 0 8px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        @media (max-width: @screen-md-max) {
+            height: 100%;
+        }
+    }
+
+    &-sider {
+        flex: auto; 
+        height: calc(~"100% - 30px");
+        background-color: #2D4054;
+        padding-top: 20px;
+        color: #FFF;
+        text-align: left;
+        max-width: 230px;
+        @media (max-width: @screen-md-max) {
+            display: none;
+            height: calc(~"100% - 20px");
+        }
+        &-icon {
+            display: none;
+            @media (max-width: @screen-md-max) {
+                display: inline-block;
+            }
+            position: absolute;
+            
+            float: right;
+            right: 8px;
+            top: 8px;
+        }
+
+        &-show{
+            display: inline-block !important;
+            position: absolute;
+            flex: none;
+            width: 230px;
+            z-index: 50;
+            top: 0;
+        }
+
+    }
+}

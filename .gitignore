@@ -1,0 +1,14 @@
+.idea
+*.iml
+out/
+node_modules/
+*.log
+.DS_Store
+**/node_modules/
+dist
+npm-debug.log.*
+docs
+.history
+archive/
+**/uploads/
+stand/

@@ -1,0 +1,31 @@
+.my-dropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer; 
+    &-icon {
+        float: right;
+        line-height: 40px;
+    }
+    &-menu {
+        display: none;
+        position: absolute;
+        background-color: #FFF;
+        min-width: 100px;
+        padding: 10px 0px;
+        z-index: 99;
+        right: 0;
+        line-height: 30px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        a{
+            display: block;
+            cursor: pointer;
+            &:hover{
+                background-color: #EFEFEF;
+            }
+        }
+    } 
+}
+
+.my-dropdown:hover .my-dropdown-menu{
+    display: block;
+}

@@ -1,0 +1,22 @@
+@import './font icons/fonts.css';
+.my-icon {
+    display: inline-block;
+    font-family: 'cruise' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    outline:none;
+    &-spin{
+        animation: ani-demo-spin 12s linear infinite;
+    }
+    @keyframes ani-demo-spin {
+        from { transform: rotate(0deg);}
+        50%  { transform: rotate(180deg);}
+        to   { transform: rotate(360deg);}
+    }
+}

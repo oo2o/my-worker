@@ -1,0 +1,38 @@
+input{
+    // outline:0;
+    outline-color: #BBDEFB;
+    height: 26px;
+}
+
+.my-input {
+
+    padding: 0 4px;
+    border: 1px solid #E1E4E6;
+
+    &-div{
+        display: inline-block; 
+        position: relative;
+        @media (max-width: @screen-sm-max) {
+            width: 100%;
+        }
+    }    
+
+    &-search{
+        width: 100%;
+        background-color: #EFEFEF;
+        margin-left: 12px;
+        &:focus {
+            background-color: #FFF;
+        }
+        &-icon {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            color: #a0a1a2;
+            z-index: 3;
+        }
+        @media (max-width: @screen-sm-max) {
+        width: calc(~"100% - 34px");
+        }
+    }
+}

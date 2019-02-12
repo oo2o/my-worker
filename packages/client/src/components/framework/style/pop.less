@@ -1,0 +1,142 @@
+.my-pop {
+    display: inline-block;
+    position: relative;
+    @media (max-width: @screen-md-max){
+        position: inherit;
+    }
+    & input{
+        width: calc(~"100% - 12px");
+    }
+    &-button {
+        font-size: 14px; 
+        cursor: pointer;
+        &-ok {
+            @media (max-width: @screen-sm-max){
+                width: 100%;
+            }
+        }
+        &-cancle {
+            @media (max-width: @screen-sm-max){
+                display: none;
+            }
+        }
+    }
+    &-tooltip {
+        position: absolute;
+    }
+    &-mask {
+        left: 0px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        opacity: 0;  /*非IE浏览器下设置透明度为60%*/
+        width: 100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+        height: 100%;
+        z-Index: 999; 
+        @media (max-width: @screen-md-max) {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+            height: 100%;
+            opacity: 0.6;  /*非IE浏览器下设置透明度为60%*/
+            z-Index: 999; 
+            display: inline;
+            text-align: center;
+        }
+       
+    }
+
+    &-wrap{
+        z-index: 999;
+        position: absolute;
+        display: inline;
+        left: -25px;
+        @media (max-width: @screen-md-max){
+            position: fixed;
+            // z-index: 100000;
+            width: 100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+            height: 100%;
+            text-align: center;
+            left: 0;
+            top: 0;            
+        }
+       
+    }
+
+    &-content {
+        width: 570px;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.3); 
+        border: 1px solid @primary-color;
+        background-color: #ffffff;
+        opacity: 1;
+        @media (min-width: @screen-md){
+            margin: 16px 0 0 0;
+        }  
+        
+        @media (max-width: @screen-md-max) and (min-width: @screen-sm-max){            
+            margin: 0 auto;
+            margin-top: 200px;
+            position: relative;
+        }
+        
+        @media (max-width: @screen-sm-max){
+            width: calc(~"100% - 2px");
+            bottom: 0px;
+            position: absolute;
+        }
+    }
+
+    &-arrow {
+        display: none; 
+        @media (min-width: @screen-md){
+            display: inline; 
+            position: absolute;
+            color: #FFFFFF;
+            width: 0px;
+            height:0px;
+            line-height: 0px;
+            border-width: 0 8px 16px 8px;
+            border-style: solid;
+            border-color: transparent transparent @primary-color transparent;
+            left: 22px;
+        }
+        &-border{
+            color: @primary-color;   
+        }
+
+        &-bg{
+            border-color: transparent transparent #fff transparent;
+            top: 1px;
+        }
+               
+    }
+
+    &-close {
+        font-size: @font-size-small;
+        position: absolute;
+        right: 12px;
+        top: 5px;
+        overflow: hidden; 
+        cursor: pointer;
+        @media (min-width: @screen-md){
+            margin: 16px 0 0 0;
+        }  
+    }
+
+    &-header{
+        padding: 12px;
+        text-align: left;
+    }
+
+    &-body{
+        padding: 0 12px 4px 12px;
+    }
+
+    &-footer{
+        padding: 12px;
+    }
+ 
+    
+}

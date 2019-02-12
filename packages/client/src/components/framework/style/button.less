@@ -1,0 +1,51 @@
+.my-button{
+    font-size: 14px;
+    height: 30px;
+    line-height: 1;
+    border: none;
+    color: #ffffff;
+    padding: 4px 12px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    &:active{
+        border: none;
+    }
+    &-primary{
+        background-color: @primary-color;
+        &:hover {
+            background-color: @primary-color-hover ;
+        }
+
+        // &:hover{
+        //     background-color: @info-color; 
+        // }
+    }
+
+    &-info{
+        background-color: @info-color;
+    }
+
+    &-disable{
+        background-color: @disable-color;
+    }
+
+    &-success{
+        background-color: @success-color;
+    }
+
+    &-warning{
+        background-color: @warning-color;
+    }
+
+    &-error{
+        background-color: @error-color;
+    }
+    &-cancle{
+        background-color: @cancle-color;
+        &:hover {
+            background-color: @cancle-color-hover;
+        }
+    }
+
+    
+}

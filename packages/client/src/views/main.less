@@ -1,0 +1,169 @@
+@import '../components/framework/style/index.less';
+
+.sider{
+    &-history{
+        color: #E1E4E6;
+        overflow-y: hidden;
+        max-height: calc(~"50% - 30px");
+        clear: both;
+
+        &  > ul{
+            padding: 0px;
+            & > li {
+                padding: 4px 12px;
+                color: #999;
+                font-size: 12px;
+                list-style-position: inside;
+                // list-style-type: circle;
+                &:hover {
+                    color: #00B4CF;
+                }
+
+                & > div {
+                    display: inline-block;
+                    text-overflow : ellipsis;
+                    width: 180px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        } 
+
+        & > span {
+            display: inherit;
+            font-size: 24px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            color: #ccc;
+        }
+    }
+}
+
+.agent{
+    &-title{
+        position: relative;
+        width: 100%;
+        @media (max-width: @screen-sm-max) {
+
+            // padding: 0 8px; 
+        }
+    }
+
+    &-search{
+        width: calc(~"100% - 292px");
+        position: absolute;
+        right: 0;
+        height: 50px;
+        line-height: 50px;
+        background: #FFF;
+        @media (max-width: @screen-sm-max) {
+            position: initial;
+            margin-bottom: 16px;
+            width: calc(~"100% - 17px");
+            padding: 0 8px; 
+        }
+    }
+
+    &-tabitem{
+        @media (max-width: @screen-sm-max) {
+            width: calc(~"(100% - 51px) / 3")
+        }
+        width: 80px;
+    }
+
+    &-card {
+        width: calc(~"100% / 3");
+        display: inline-block;
+        @media (max-width: @screen-sm-max) {
+            width: calc(~"100% / 2");
+        }
+
+        &-total{
+            width: calc(~"100% / 3");
+            display: inline-block;
+            @media (max-width: @screen-sm-max) {
+                width: 100%;
+            }
+        }
+
+        &-resource{
+            display: inline-block;
+
+            &-button{
+                // display: inline-block;
+                float: right; 
+                height: 30px; 
+                right: 4px;
+                @media (max-width: @screen-sm-max) {
+                    display: inherit;
+                    height: 40px;
+                    float: none;
+                }
+            }
+        }
+
+        
+    }
+
+    &-list-row{
+        background-color: #FFF;
+        padding: 10px 6px;
+    }
+
+    &-list-item{
+        width: calc(~"100% - 108px");
+        float: right;
+        > div{
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+
+            &:nth-child(2){
+                padding-top: 10px;
+            }            
+        }
+        @media (max-width: @screen-md-max) {
+            width: 100%;
+            float: none;
+        }
+
+        
+    }
+
+    &-image-item{
+        display: inline-block;
+        height: 80px;  
+        padding-left: 10px;
+        img {
+            width: 80px;
+        }  
+        @media (max-width: @screen-md-max) {
+            display: none;
+        }
+    }
+}
+
+.my-hidden-sm{
+    @media (max-width: @screen-sm-max) {
+        display: none;
+    }
+}
+
+.my-hidden-md{
+    @media (max-width: @screen-md-max) {
+        display: none;
+    }
+}
+
+.my-hidden-lg{
+    @media (max-width: @screen-lg-max) {
+        display: none;
+    }
+}
+
+.my-show-sm{
+    display: none;
+    @media (max-width: @screen-sm-max) {
+        display: inline;
+    }
+}

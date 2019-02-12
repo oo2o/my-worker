@@ -1,0 +1,32 @@
+.my-row {
+    position: relative;
+}
+@col-prefix-cls   : my-col;
+.my-col-span-6{
+     display: block;
+     width: 25%;
+}
+.loop-grid-columns(@grid-columns);
+
+.loop-grid-columns(@index) when (@index > 0) {
+    .@{col-prefix-cls}-span-@{index} {
+        display: inline-block;
+        width: percentage((@index / @grid-columns));
+        @media (max-width: @screen-sm-max) {
+            width: 100%;
+        }
+    }
+    .@{col-prefix-cls}-push-@{index} {
+        left: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}-pull-@{index} {
+        right: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}-offset-@{index} {
+        margin-left: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}-order-@{index} {
+        order: @index;
+    }
+    .loop-grid-columns((@index - 1));
+}
